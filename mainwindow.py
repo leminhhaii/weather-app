@@ -25,7 +25,7 @@ from collections import Counter
 #     pyside2-uic form.ui -o ui_form.py
 from ui_form import Ui_MainWindow
 # from PyQt5 import uic
-API_key = "b0fe4918f63d2cee8180e79d30a72792"
+API_key = ""
 
 class MainWindow(QMainWindow):
 	def __init__(self, parent=None):
