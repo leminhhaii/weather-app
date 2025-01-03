@@ -1,9 +1,9 @@
 # This Python file uses the following encoding: utf-8
 import sys
 
-from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter, QMessageBox, QVBoxLayout, QWidget
+from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter, QMessageBox
 from PySide6.QtCore import QTimer, QTime, QDate, Qt, QStringListModel
-from PySide6.QtGui import QPixmap,QPainter
+from PySide6.QtGui import QPixmap
 import requests
 from datetime import datetime
 import os
@@ -17,7 +17,6 @@ import numpy as np
 import requests
 from geopy.distance import geodesic
 import pycountry
-from PySide6.QtCharts import QChart, QChartView, QLineSeries, QCategoryAxis, QValueAxis
 from collections import Counter
 
 # Important:
@@ -25,7 +24,7 @@ from collections import Counter
 #     pyside6-uic form.ui -o ui_form.py, or
 #     pyside2-uic form.ui -o ui_form.py
 from ui_form import Ui_MainWindow
-from PyQt5 import uic
+# from PyQt5 import uic
 API_key = "b0fe4918f63d2cee8180e79d30a72792"
 
 class MainWindow(QMainWindow):
@@ -70,7 +69,7 @@ class MainWindow(QMainWindow):
 		message_box.setWindowTitle("About This App")
 		message_box.setText("This app provides the following functionalities:\n\n1. Display current weather information.\n2. Display nearby cities.\n3. Display weather forecast for each 3 hours/each day for 5 days.")
 		message_box.setStandardButtons(QMessageBox.Ok)
-		message_box.exec_()
+		message_box.exec()
 
 	def fill_search(self, city_list):
 	# Initialize the model for QCompleter
@@ -352,7 +351,7 @@ class MainWindow(QMainWindow):
 			getattr(self.ui, f'forecast2_low_{n+1}').setText(f"Low: {weather['low']}°C")
 			getattr(self.ui, f'forecast2_wind_{n+1}').setText(f"Wind: {round(avg_wind_speed*3.6)}km/h")
 			getattr(self.ui, f'forecast2_humid_{n+1}').setText(f"Humidity: {round(avg_humidity)}%")
-			getattr(self.ui, f'forecast2_cloud_{n+1}').setText(f"Cloudness: {round(avg_clouds)}%")
+			getattr(self.ui, f'forecast2_cloud_{n+1}').setText(f"Cloudiness: {round(avg_clouds)}%")
 
 	def set_weather_icon(self, label, icon):
 		label.setPixmap(

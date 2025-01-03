@@ -57,10 +57,10 @@ color: #000000;</string>
       <widget class="QWidget" name="scrollAreaWidgetContents">
        <property name="geometry">
         <rect>
-         <x>-26</x>
-         <y>0</y>
+         <x>0</x>
+         <y>-250</y>
          <width>1251</width>
-         <height>1062</height>
+         <height>1154</height>
         </rect>
        </property>
        <property name="styleSheet">
@@ -453,7 +453,7 @@ padding: 10px;
 border-radius: 20px;</string>
                 </property>
                 <property name="text">
-                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please wait...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Please &lt;/p&gt;&lt;p&gt;wait...&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                 </property>
                </widget>
               </item>
@@ -731,6 +731,9 @@ border-radius: 20px;</string>
                 <layout class="QVBoxLayout" name="verticalLayout_17">
                  <item>
                   <widget class="QLabel" name="label_9">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
                    <property name="text">
                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt;Nearby cities&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
@@ -877,6 +880,12 @@ border-radius: 20px;</string>
                         <pointsize>14</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);
+color: #000000;
+padding: 5px;
+border-radius: 20px;</string>
+                      </property>
                       <property name="text">
                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;2024-12-03&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                       </property>
@@ -891,6 +900,12 @@ border-radius: 20px;</string>
                        <font>
                         <pointsize>14</pointsize>
                        </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);
+color: #000000;
+padding: 5px;
+border-radius: 20px;</string>
                       </property>
                       <property name="text">
                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Monday&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -927,6 +942,9 @@ border-radius: 20px;</string>
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="label_4">
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
                    <property name="text">
                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:18pt;&quot;&gt;Time and date&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                    </property>
@@ -961,8 +979,14 @@ border-radius: 20px;</string>
                         <pointsize>18</pointsize>
                        </font>
                       </property>
+                      <property name="styleSheet">
+                       <string notr="true">background-color: rgb(255, 255, 255);
+color: #000000;
+padding: 10px;
+border-radius: 20px;</string>
+                      </property>
                       <property name="text">
-                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;00:00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:48pt;&quot;&gt;00:00&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                       </property>
                       <property name="alignment">
                        <set>Qt::AlignmentFlag::AlignCenter</set>
@@ -1136,7 +1160,7 @@ border-radius: 10px;</string>
                     <x>0</x>
                     <y>0</y>
                     <width>2177</width>
-                    <height>277</height>
+                    <height>300</height>
                    </rect>
                   </property>
                   <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -1175,7 +1199,7 @@ color: #000000;
 padding: 5px;
 border-radius: 20px;
 border: none;
-background: transparent;</string>
+background-color: transparent;</string>
                         </property>
                         <property name="frameShape">
                          <enum>QFrame::Shape::StyledPanel</enum>
@@ -1283,7 +1307,7 @@ color: #000000;
 padding: 5px;
 border-radius: 20px;
 border: none;
-background: transparent;</string>
+background-color: transparent;</string>
                         </property>
                         <property name="frameShape">
                          <enum>QFrame::Shape::StyledPanel</enum>
@@ -1494,12 +1518,13 @@ background: none;</string>
                       <item>
                        <widget class="QFrame" name="frame_20">
                         <property name="styleSheet">
-                         <string notr="true">background-color: rgb(255, 255, 255);
+                         <string notr="true">background-color: rgb(255, 233, 236);
 color: #000000;
 padding: 5px;
 border-radius: 20px;
 border: none;
-background-color: transparent;</string>
+background: transparent;
+</string>
                         </property>
                         <property name="frameShape">
                          <enum>QFrame::Shape::StyledPanel</enum>
@@ -2842,7 +2867,7 @@ border: 1px solid black;</string>
                         <enum>QFrame::Shadow::Raised</enum>
                        </property>
                        <layout class="QGridLayout" name="gridLayout_2">
-                        <item row="4" column="0">
+                        <item row="4" column="0" colspan="2">
                          <widget class="QLabel" name="forecast2_cloud_1">
                           <property name="minimumSize">
                            <size>
@@ -2865,29 +2890,6 @@ border: 1px solid black;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="3" column="0">
-                         <widget class="QLabel" name="forecast2_wind_1">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;wind&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
                         <item row="1" column="1">
                          <widget class="QLabel" name="forecast2_high_1">
                           <property name="styleSheet">
@@ -2898,26 +2900,16 @@ border: 1px solid black;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="3" column="1">
-                         <widget class="QLabel" name="forecast2_humid_1">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QLabel" name="day_number_1">
                           <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
+                           <string notr="true">border:none;</string>
                           </property>
                           <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;humid&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;+1 day&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
@@ -2990,16 +2982,49 @@ background: none;</string>
                           </layout>
                          </widget>
                         </item>
-                        <item row="0" column="0" colspan="2">
-                         <widget class="QLabel" name="day_number_1">
+                        <item row="3" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_wind_1">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
                           <property name="styleSheet">
-                           <string notr="true">border:none;</string>
+                           <string notr="true">color: #000000;border: none;</string>
                           </property>
                           <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;+1 day&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;wind&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignmentFlag::AlignCenter</set>
+                         </widget>
+                        </item>
+                        <item row="5" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_humid_1">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #000000;border: none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;humid&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                           </property>
                          </widget>
                         </item>
@@ -3022,6 +3047,49 @@ border: 1px solid black;</string>
                         <enum>QFrame::Shadow::Raised</enum>
                        </property>
                        <layout class="QGridLayout" name="gridLayout_9">
+                        <item row="4" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_cloud_2">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #000000;border: none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cloud&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="forecast2_low_2">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;low&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="forecast2_high_2">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;high&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
                         <item row="1" column="0" rowspan="2">
                          <widget class="QFrame" name="frame_55">
                           <property name="minimumSize">
@@ -3081,27 +3149,20 @@ background: none;</string>
                           </layout>
                          </widget>
                         </item>
-                        <item row="1" column="1">
-                         <widget class="QLabel" name="forecast2_high_2">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QLabel" name="day_number_2">
                           <property name="styleSheet">
-                           <string notr="true">border:none;</string>
+                           <string notr="true">border: none;</string>
                           </property>
                           <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;high&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;+1 day&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignCenter</set>
                           </property>
                          </widget>
                         </item>
-                        <item row="2" column="1">
-                         <widget class="QLabel" name="forecast2_low_2">
-                          <property name="styleSheet">
-                           <string notr="true">border:none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;low&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="0">
+                        <item row="3" column="0" colspan="2">
                          <widget class="QLabel" name="forecast2_wind_2">
                           <property name="minimumSize">
                            <size>
@@ -3124,7 +3185,7 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="3" column="1">
+                        <item row="5" column="0" colspan="2">
                          <widget class="QLabel" name="forecast2_humid_2">
                           <property name="minimumSize">
                            <size>
@@ -3147,42 +3208,6 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="4" column="0">
-                         <widget class="QLabel" name="forecast2_cloud_2">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;cloud&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="0" column="0" colspan="2">
-                         <widget class="QLabel" name="day_number_2">
-                          <property name="styleSheet">
-                           <string notr="true">border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;+1 day&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignmentFlag::AlignCenter</set>
-                          </property>
-                         </widget>
-                        </item>
                        </layout>
                       </widget>
                      </item>
@@ -3202,6 +3227,19 @@ border: 1px solid black;</string>
                         <enum>QFrame::Shadow::Raised</enum>
                        </property>
                        <layout class="QGridLayout" name="gridLayout_10">
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QLabel" name="day_number_3">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;+1 day&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
                         <item row="1" column="0" rowspan="2">
                          <widget class="QFrame" name="frame_56">
                           <property name="minimumSize">
@@ -3281,53 +3319,7 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="3" column="0">
-                         <widget class="QLabel" name="forecast2_wind_3">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>wind </string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="1">
-                         <widget class="QLabel" name="forecast2_humid_3">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>humid</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="4" column="0">
+                        <item row="4" column="0" colspan="2">
                          <widget class="QLabel" name="forecast2_cloud_3">
                           <property name="minimumSize">
                            <size>
@@ -3350,16 +3342,49 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="0" column="0" colspan="2">
-                         <widget class="QLabel" name="day_number_3">
+                        <item row="5" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_humid_3">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
                           <property name="styleSheet">
-                           <string notr="true">border:none;</string>
+                           <string notr="true">color: #000000;border: none;</string>
                           </property>
                           <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;+1 day&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           <string>humid</string>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignmentFlag::AlignCenter</set>
+                         </widget>
+                        </item>
+                        <item row="3" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_wind_3">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #000000;border: none;</string>
+                          </property>
+                          <property name="text">
+                           <string>wind </string>
                           </property>
                          </widget>
                         </item>
@@ -3382,6 +3407,39 @@ border: 1px solid black;</string>
                         <enum>QFrame::Shadow::Raised</enum>
                        </property>
                        <layout class="QGridLayout" name="gridLayout_12">
+                        <item row="4" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_cloud_4">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #000000;border: none;</string>
+                          </property>
+                          <property name="text">
+                           <string>cloud </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="forecast2_low_4">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;low &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
                         <item row="1" column="0" rowspan="2">
                          <widget class="QFrame" name="frame_57">
                           <property name="minimumSize">
@@ -3441,6 +3499,19 @@ background: none;</string>
                           </layout>
                          </widget>
                         </item>
+                        <item row="0" column="0" colspan="2">
+                         <widget class="QLabel" name="day_number_4">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;+1 day&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignmentFlag::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
                         <item row="1" column="1">
                          <widget class="QLabel" name="forecast2_high_4">
                           <property name="styleSheet">
@@ -3451,40 +3522,7 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="2" column="1">
-                         <widget class="QLabel" name="forecast2_low_4">
-                          <property name="styleSheet">
-                           <string notr="true">border:none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;low &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="0">
-                         <widget class="QLabel" name="forecast2_wind_4">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>wind </string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="1">
+                        <item row="5" column="0" colspan="2">
                          <widget class="QLabel" name="forecast2_humid_4">
                           <property name="minimumSize">
                            <size>
@@ -3507,8 +3545,8 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
-                        <item row="4" column="0">
-                         <widget class="QLabel" name="forecast2_cloud_4">
+                        <item row="3" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_wind_4">
                           <property name="minimumSize">
                            <size>
                             <width>0</width>
@@ -3526,20 +3564,7 @@ background: none;</string>
                            <string notr="true">color: #000000;border: none;</string>
                           </property>
                           <property name="text">
-                           <string>cloud </string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="0" column="0" colspan="2">
-                         <widget class="QLabel" name="day_number_4">
-                          <property name="styleSheet">
-                           <string notr="true">border:none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; color:#000000;&quot;&gt;+1 day&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignmentFlag::AlignCenter</set>
+                           <string>wind </string>
                           </property>
                          </widget>
                         </item>
@@ -3621,73 +3646,7 @@ background: none;</string>
                           </layout>
                          </widget>
                         </item>
-                        <item row="1" column="1">
-                         <widget class="QLabel" name="forecast2_high_5">
-                          <property name="styleSheet">
-                           <string notr="true">border:none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;high &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="2" column="1">
-                         <widget class="QLabel" name="forecast2_low_5">
-                          <property name="styleSheet">
-                           <string notr="true">border:none;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;low &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="0">
-                         <widget class="QLabel" name="forecast2_wind_5">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>wind </string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="3" column="1">
-                         <widget class="QLabel" name="forecast2_humid_5">
-                          <property name="minimumSize">
-                           <size>
-                            <width>0</width>
-                            <height>30</height>
-                           </size>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <family>Segoe UI</family>
-                            <pointsize>9</pointsize>
-                            <bold>true</bold>
-                           </font>
-                          </property>
-                          <property name="styleSheet">
-                           <string notr="true">color: #000000;border: none;</string>
-                          </property>
-                          <property name="text">
-                           <string>humid</string>
-                          </property>
-                         </widget>
-                        </item>
-                        <item row="4" column="0">
+                        <item row="5" column="0" colspan="2">
                          <widget class="QLabel" name="forecast2_cloud_5">
                           <property name="minimumSize">
                            <size>
@@ -3710,6 +3669,16 @@ background: none;</string>
                           </property>
                          </widget>
                         </item>
+                        <item row="1" column="1">
+                         <widget class="QLabel" name="forecast2_high_5">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;high &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
                         <item row="0" column="0" colspan="2">
                          <widget class="QLabel" name="day_number_5">
                           <property name="styleSheet">
@@ -3720,6 +3689,62 @@ background: none;</string>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignmentFlag::AlignCenter</set>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="2" column="1">
+                         <widget class="QLabel" name="forecast2_low_5">
+                          <property name="styleSheet">
+                           <string notr="true">border:none;</string>
+                          </property>
+                          <property name="text">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#000000;&quot;&gt;low &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="3" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_wind_5">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #000000;border: none;</string>
+                          </property>
+                          <property name="text">
+                           <string>wind </string>
+                          </property>
+                         </widget>
+                        </item>
+                        <item row="4" column="0" colspan="2">
+                         <widget class="QLabel" name="forecast2_humid_5">
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>30</height>
+                           </size>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI</family>
+                            <pointsize>9</pointsize>
+                            <bold>true</bold>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: #000000;border: none;</string>
+                          </property>
+                          <property name="text">
+                           <string>humid</string>
                           </property>
                          </widget>
                         </item>

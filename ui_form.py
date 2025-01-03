@@ -52,7 +52,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(-26, 0, 1251, 1062))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, -158, 1251, 1154))
         self.scrollAreaWidgetContents.setStyleSheet(u"")
         self.verticalLayout_3 = QVBoxLayout(self.scrollAreaWidgetContents)
         self.verticalLayout_3.setObjectName(u"verticalLayout_3")
@@ -382,6 +382,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_17.setObjectName(u"verticalLayout_17")
         self.label_9 = QLabel(self.frame_53)
         self.label_9.setObjectName(u"label_9")
+        self.label_9.setStyleSheet(u"")
 
         self.verticalLayout_17.addWidget(self.label_9)
 
@@ -479,6 +480,10 @@ class Ui_MainWindow(object):
         self.label_7 = QLabel(self.frame_10)
         self.label_7.setObjectName(u"label_7")
         self.label_7.setFont(font1)
+        self.label_7.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"color: #000000;\n"
+"padding: 5px;\n"
+"border-radius: 20px;")
         self.label_7.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.horizontalLayout_2.addWidget(self.label_7)
@@ -486,6 +491,10 @@ class Ui_MainWindow(object):
         self.label_6 = QLabel(self.frame_10)
         self.label_6.setObjectName(u"label_6")
         self.label_6.setFont(font1)
+        self.label_6.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"color: #000000;\n"
+"padding: 5px;\n"
+"border-radius: 20px;")
         self.label_6.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.horizontalLayout_2.addWidget(self.label_6)
@@ -503,6 +512,7 @@ class Ui_MainWindow(object):
 
         self.label_4 = QLabel(self.frame_8)
         self.label_4.setObjectName(u"label_4")
+        self.label_4.setStyleSheet(u"")
 
         self.gridLayout_5.addWidget(self.label_4, 0, 0, 1, 1)
 
@@ -521,6 +531,10 @@ class Ui_MainWindow(object):
         font6 = QFont()
         font6.setPointSize(18)
         self.label_5.setFont(font6)
+        self.label_5.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+"color: #000000;\n"
+"padding: 10px;\n"
+"border-radius: 20px;")
         self.label_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
         self.horizontalLayout_8.addWidget(self.label_5)
@@ -602,7 +616,7 @@ class Ui_MainWindow(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 2177, 277))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 2177, 300))
         self.verticalLayout_5 = QVBoxLayout(self.scrollAreaWidgetContents_2)
         self.verticalLayout_5.setObjectName(u"verticalLayout_5")
         self.frame_4 = QFrame(self.scrollAreaWidgetContents_2)
@@ -624,7 +638,7 @@ class Ui_MainWindow(object):
 "padding: 5px;\n"
 "border-radius: 20px;\n"
 "border: none;\n"
-"background: transparent;")
+"background-color: transparent;")
         self.frame_12.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_12.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout = QGridLayout(self.frame_12)
@@ -684,7 +698,7 @@ class Ui_MainWindow(object):
 "padding: 5px;\n"
 "border-radius: 20px;\n"
 "border: none;\n"
-"background: transparent;")
+"background-color: transparent;")
         self.frame_17.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_17.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_6 = QGridLayout(self.frame_17)
@@ -795,12 +809,13 @@ class Ui_MainWindow(object):
 
         self.frame_20 = QFrame(self.frame_4)
         self.frame_20.setObjectName(u"frame_20")
-        self.frame_20.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+        self.frame_20.setStyleSheet(u"background-color: rgb(255, 233, 236);\n"
 "color: #000000;\n"
 "padding: 5px;\n"
 "border-radius: 20px;\n"
 "border: none;\n"
-"background-color: transparent;")
+"background: transparent;\n"
+"")
         self.frame_20.setFrameShape(QFrame.Shape.StyledPanel)
         self.frame_20.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_13 = QGridLayout(self.frame_20)
@@ -1539,15 +1554,7 @@ class Ui_MainWindow(object):
         self.forecast2_cloud_1.setFont(font8)
         self.forecast2_cloud_1.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_2.addWidget(self.forecast2_cloud_1, 4, 0, 1, 1)
-
-        self.forecast2_wind_1 = QLabel(self.frame_15)
-        self.forecast2_wind_1.setObjectName(u"forecast2_wind_1")
-        self.forecast2_wind_1.setMinimumSize(QSize(0, 30))
-        self.forecast2_wind_1.setFont(font8)
-        self.forecast2_wind_1.setStyleSheet(u"color: #000000;border: none;")
-
-        self.gridLayout_2.addWidget(self.forecast2_wind_1, 3, 0, 1, 1)
+        self.gridLayout_2.addWidget(self.forecast2_cloud_1, 4, 0, 1, 2)
 
         self.forecast2_high_1 = QLabel(self.frame_15)
         self.forecast2_high_1.setObjectName(u"forecast2_high_1")
@@ -1555,13 +1562,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.forecast2_high_1, 1, 1, 1, 1)
 
-        self.forecast2_humid_1 = QLabel(self.frame_15)
-        self.forecast2_humid_1.setObjectName(u"forecast2_humid_1")
-        self.forecast2_humid_1.setMinimumSize(QSize(0, 30))
-        self.forecast2_humid_1.setFont(font8)
-        self.forecast2_humid_1.setStyleSheet(u"color: #000000;border: none;")
+        self.day_number_1 = QLabel(self.frame_15)
+        self.day_number_1.setObjectName(u"day_number_1")
+        self.day_number_1.setStyleSheet(u"border:none;")
+        self.day_number_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.gridLayout_2.addWidget(self.forecast2_humid_1, 3, 1, 1, 1)
+        self.gridLayout_2.addWidget(self.day_number_1, 0, 0, 1, 2)
 
         self.forecast2_low_1 = QLabel(self.frame_15)
         self.forecast2_low_1.setObjectName(u"forecast2_low_1")
@@ -1595,12 +1601,21 @@ class Ui_MainWindow(object):
 
         self.gridLayout_2.addWidget(self.frame_54, 1, 0, 2, 1)
 
-        self.day_number_1 = QLabel(self.frame_15)
-        self.day_number_1.setObjectName(u"day_number_1")
-        self.day_number_1.setStyleSheet(u"border:none;")
-        self.day_number_1.setAlignment(Qt.AlignmentFlag.AlignCenter)
+        self.forecast2_wind_1 = QLabel(self.frame_15)
+        self.forecast2_wind_1.setObjectName(u"forecast2_wind_1")
+        self.forecast2_wind_1.setMinimumSize(QSize(0, 30))
+        self.forecast2_wind_1.setFont(font8)
+        self.forecast2_wind_1.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_2.addWidget(self.day_number_1, 0, 0, 1, 2)
+        self.gridLayout_2.addWidget(self.forecast2_wind_1, 3, 0, 1, 2)
+
+        self.forecast2_humid_1 = QLabel(self.frame_15)
+        self.forecast2_humid_1.setObjectName(u"forecast2_humid_1")
+        self.forecast2_humid_1.setMinimumSize(QSize(0, 30))
+        self.forecast2_humid_1.setFont(font8)
+        self.forecast2_humid_1.setStyleSheet(u"color: #000000;border: none;")
+
+        self.gridLayout_2.addWidget(self.forecast2_humid_1, 5, 0, 1, 2)
 
 
         self.horizontalLayout_4.addWidget(self.frame_15)
@@ -1616,6 +1631,26 @@ class Ui_MainWindow(object):
         self.frame_31.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_9 = QGridLayout(self.frame_31)
         self.gridLayout_9.setObjectName(u"gridLayout_9")
+        self.forecast2_cloud_2 = QLabel(self.frame_31)
+        self.forecast2_cloud_2.setObjectName(u"forecast2_cloud_2")
+        self.forecast2_cloud_2.setMinimumSize(QSize(0, 30))
+        self.forecast2_cloud_2.setFont(font8)
+        self.forecast2_cloud_2.setStyleSheet(u"color: #000000;border: none;")
+
+        self.gridLayout_9.addWidget(self.forecast2_cloud_2, 4, 0, 1, 2)
+
+        self.forecast2_low_2 = QLabel(self.frame_31)
+        self.forecast2_low_2.setObjectName(u"forecast2_low_2")
+        self.forecast2_low_2.setStyleSheet(u"border:none;")
+
+        self.gridLayout_9.addWidget(self.forecast2_low_2, 2, 1, 1, 1)
+
+        self.forecast2_high_2 = QLabel(self.frame_31)
+        self.forecast2_high_2.setObjectName(u"forecast2_high_2")
+        self.forecast2_high_2.setStyleSheet(u"border:none;")
+
+        self.gridLayout_9.addWidget(self.forecast2_high_2, 1, 1, 1, 1)
+
         self.frame_55 = QFrame(self.frame_31)
         self.frame_55.setObjectName(u"frame_55")
         self.frame_55.setMinimumSize(QSize(80, 80))
@@ -1642,17 +1677,12 @@ class Ui_MainWindow(object):
 
         self.gridLayout_9.addWidget(self.frame_55, 1, 0, 2, 1)
 
-        self.forecast2_high_2 = QLabel(self.frame_31)
-        self.forecast2_high_2.setObjectName(u"forecast2_high_2")
-        self.forecast2_high_2.setStyleSheet(u"border:none;")
+        self.day_number_2 = QLabel(self.frame_31)
+        self.day_number_2.setObjectName(u"day_number_2")
+        self.day_number_2.setStyleSheet(u"border: none;")
+        self.day_number_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-        self.gridLayout_9.addWidget(self.forecast2_high_2, 1, 1, 1, 1)
-
-        self.forecast2_low_2 = QLabel(self.frame_31)
-        self.forecast2_low_2.setObjectName(u"forecast2_low_2")
-        self.forecast2_low_2.setStyleSheet(u"border:none;")
-
-        self.gridLayout_9.addWidget(self.forecast2_low_2, 2, 1, 1, 1)
+        self.gridLayout_9.addWidget(self.day_number_2, 0, 0, 1, 2)
 
         self.forecast2_wind_2 = QLabel(self.frame_31)
         self.forecast2_wind_2.setObjectName(u"forecast2_wind_2")
@@ -1660,7 +1690,7 @@ class Ui_MainWindow(object):
         self.forecast2_wind_2.setFont(font8)
         self.forecast2_wind_2.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_9.addWidget(self.forecast2_wind_2, 3, 0, 1, 1)
+        self.gridLayout_9.addWidget(self.forecast2_wind_2, 3, 0, 1, 2)
 
         self.forecast2_humid_2 = QLabel(self.frame_31)
         self.forecast2_humid_2.setObjectName(u"forecast2_humid_2")
@@ -1668,22 +1698,7 @@ class Ui_MainWindow(object):
         self.forecast2_humid_2.setFont(font8)
         self.forecast2_humid_2.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_9.addWidget(self.forecast2_humid_2, 3, 1, 1, 1)
-
-        self.forecast2_cloud_2 = QLabel(self.frame_31)
-        self.forecast2_cloud_2.setObjectName(u"forecast2_cloud_2")
-        self.forecast2_cloud_2.setMinimumSize(QSize(0, 30))
-        self.forecast2_cloud_2.setFont(font8)
-        self.forecast2_cloud_2.setStyleSheet(u"color: #000000;border: none;")
-
-        self.gridLayout_9.addWidget(self.forecast2_cloud_2, 4, 0, 1, 1)
-
-        self.day_number_2 = QLabel(self.frame_31)
-        self.day_number_2.setObjectName(u"day_number_2")
-        self.day_number_2.setStyleSheet(u"border: none;")
-        self.day_number_2.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_9.addWidget(self.day_number_2, 0, 0, 1, 2)
+        self.gridLayout_9.addWidget(self.forecast2_humid_2, 5, 0, 1, 2)
 
 
         self.horizontalLayout_4.addWidget(self.frame_31)
@@ -1699,6 +1714,13 @@ class Ui_MainWindow(object):
         self.frame_33.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_10 = QGridLayout(self.frame_33)
         self.gridLayout_10.setObjectName(u"gridLayout_10")
+        self.day_number_3 = QLabel(self.frame_33)
+        self.day_number_3.setObjectName(u"day_number_3")
+        self.day_number_3.setStyleSheet(u"border:none;")
+        self.day_number_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_10.addWidget(self.day_number_3, 0, 0, 1, 2)
+
         self.frame_56 = QFrame(self.frame_33)
         self.frame_56.setObjectName(u"frame_56")
         self.frame_56.setMinimumSize(QSize(80, 80))
@@ -1737,13 +1759,13 @@ class Ui_MainWindow(object):
 
         self.gridLayout_10.addWidget(self.forecast2_low_3, 2, 1, 1, 1)
 
-        self.forecast2_wind_3 = QLabel(self.frame_33)
-        self.forecast2_wind_3.setObjectName(u"forecast2_wind_3")
-        self.forecast2_wind_3.setMinimumSize(QSize(0, 30))
-        self.forecast2_wind_3.setFont(font8)
-        self.forecast2_wind_3.setStyleSheet(u"color: #000000;border: none;")
+        self.forecast2_cloud_3 = QLabel(self.frame_33)
+        self.forecast2_cloud_3.setObjectName(u"forecast2_cloud_3")
+        self.forecast2_cloud_3.setMinimumSize(QSize(0, 30))
+        self.forecast2_cloud_3.setFont(font8)
+        self.forecast2_cloud_3.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_10.addWidget(self.forecast2_wind_3, 3, 0, 1, 1)
+        self.gridLayout_10.addWidget(self.forecast2_cloud_3, 4, 0, 1, 2)
 
         self.forecast2_humid_3 = QLabel(self.frame_33)
         self.forecast2_humid_3.setObjectName(u"forecast2_humid_3")
@@ -1751,22 +1773,15 @@ class Ui_MainWindow(object):
         self.forecast2_humid_3.setFont(font8)
         self.forecast2_humid_3.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_10.addWidget(self.forecast2_humid_3, 3, 1, 1, 1)
+        self.gridLayout_10.addWidget(self.forecast2_humid_3, 5, 0, 1, 2)
 
-        self.forecast2_cloud_3 = QLabel(self.frame_33)
-        self.forecast2_cloud_3.setObjectName(u"forecast2_cloud_3")
-        self.forecast2_cloud_3.setMinimumSize(QSize(0, 30))
-        self.forecast2_cloud_3.setFont(font8)
-        self.forecast2_cloud_3.setStyleSheet(u"color: #000000;border: none;")
+        self.forecast2_wind_3 = QLabel(self.frame_33)
+        self.forecast2_wind_3.setObjectName(u"forecast2_wind_3")
+        self.forecast2_wind_3.setMinimumSize(QSize(0, 30))
+        self.forecast2_wind_3.setFont(font8)
+        self.forecast2_wind_3.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_10.addWidget(self.forecast2_cloud_3, 4, 0, 1, 1)
-
-        self.day_number_3 = QLabel(self.frame_33)
-        self.day_number_3.setObjectName(u"day_number_3")
-        self.day_number_3.setStyleSheet(u"border:none;")
-        self.day_number_3.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_10.addWidget(self.day_number_3, 0, 0, 1, 2)
+        self.gridLayout_10.addWidget(self.forecast2_wind_3, 3, 0, 1, 2)
 
 
         self.horizontalLayout_4.addWidget(self.frame_33)
@@ -1782,6 +1797,20 @@ class Ui_MainWindow(object):
         self.frame_35.setFrameShadow(QFrame.Shadow.Raised)
         self.gridLayout_12 = QGridLayout(self.frame_35)
         self.gridLayout_12.setObjectName(u"gridLayout_12")
+        self.forecast2_cloud_4 = QLabel(self.frame_35)
+        self.forecast2_cloud_4.setObjectName(u"forecast2_cloud_4")
+        self.forecast2_cloud_4.setMinimumSize(QSize(0, 30))
+        self.forecast2_cloud_4.setFont(font8)
+        self.forecast2_cloud_4.setStyleSheet(u"color: #000000;border: none;")
+
+        self.gridLayout_12.addWidget(self.forecast2_cloud_4, 4, 0, 1, 2)
+
+        self.forecast2_low_4 = QLabel(self.frame_35)
+        self.forecast2_low_4.setObjectName(u"forecast2_low_4")
+        self.forecast2_low_4.setStyleSheet(u"border:none;")
+
+        self.gridLayout_12.addWidget(self.forecast2_low_4, 2, 1, 1, 1)
+
         self.frame_57 = QFrame(self.frame_35)
         self.frame_57.setObjectName(u"frame_57")
         self.frame_57.setMinimumSize(QSize(80, 80))
@@ -1808,25 +1837,18 @@ class Ui_MainWindow(object):
 
         self.gridLayout_12.addWidget(self.frame_57, 1, 0, 2, 1)
 
+        self.day_number_4 = QLabel(self.frame_35)
+        self.day_number_4.setObjectName(u"day_number_4")
+        self.day_number_4.setStyleSheet(u"border:none;")
+        self.day_number_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_12.addWidget(self.day_number_4, 0, 0, 1, 2)
+
         self.forecast2_high_4 = QLabel(self.frame_35)
         self.forecast2_high_4.setObjectName(u"forecast2_high_4")
         self.forecast2_high_4.setStyleSheet(u"border:none;")
 
         self.gridLayout_12.addWidget(self.forecast2_high_4, 1, 1, 1, 1)
-
-        self.forecast2_low_4 = QLabel(self.frame_35)
-        self.forecast2_low_4.setObjectName(u"forecast2_low_4")
-        self.forecast2_low_4.setStyleSheet(u"border:none;")
-
-        self.gridLayout_12.addWidget(self.forecast2_low_4, 2, 1, 1, 1)
-
-        self.forecast2_wind_4 = QLabel(self.frame_35)
-        self.forecast2_wind_4.setObjectName(u"forecast2_wind_4")
-        self.forecast2_wind_4.setMinimumSize(QSize(0, 30))
-        self.forecast2_wind_4.setFont(font8)
-        self.forecast2_wind_4.setStyleSheet(u"color: #000000;border: none;")
-
-        self.gridLayout_12.addWidget(self.forecast2_wind_4, 3, 0, 1, 1)
 
         self.forecast2_humid_4 = QLabel(self.frame_35)
         self.forecast2_humid_4.setObjectName(u"forecast2_humid_4")
@@ -1834,22 +1856,15 @@ class Ui_MainWindow(object):
         self.forecast2_humid_4.setFont(font8)
         self.forecast2_humid_4.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_12.addWidget(self.forecast2_humid_4, 3, 1, 1, 1)
+        self.gridLayout_12.addWidget(self.forecast2_humid_4, 5, 0, 1, 2)
 
-        self.forecast2_cloud_4 = QLabel(self.frame_35)
-        self.forecast2_cloud_4.setObjectName(u"forecast2_cloud_4")
-        self.forecast2_cloud_4.setMinimumSize(QSize(0, 30))
-        self.forecast2_cloud_4.setFont(font8)
-        self.forecast2_cloud_4.setStyleSheet(u"color: #000000;border: none;")
+        self.forecast2_wind_4 = QLabel(self.frame_35)
+        self.forecast2_wind_4.setObjectName(u"forecast2_wind_4")
+        self.forecast2_wind_4.setMinimumSize(QSize(0, 30))
+        self.forecast2_wind_4.setFont(font8)
+        self.forecast2_wind_4.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_12.addWidget(self.forecast2_cloud_4, 4, 0, 1, 1)
-
-        self.day_number_4 = QLabel(self.frame_35)
-        self.day_number_4.setObjectName(u"day_number_4")
-        self.day_number_4.setStyleSheet(u"border:none;")
-        self.day_number_4.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_12.addWidget(self.day_number_4, 0, 0, 1, 2)
+        self.gridLayout_12.addWidget(self.forecast2_wind_4, 3, 0, 1, 2)
 
 
         self.horizontalLayout_4.addWidget(self.frame_35)
@@ -1891,11 +1906,26 @@ class Ui_MainWindow(object):
 
         self.gridLayout_11.addWidget(self.frame_58, 1, 0, 2, 1)
 
+        self.forecast2_cloud_5 = QLabel(self.frame_37)
+        self.forecast2_cloud_5.setObjectName(u"forecast2_cloud_5")
+        self.forecast2_cloud_5.setMinimumSize(QSize(0, 30))
+        self.forecast2_cloud_5.setFont(font8)
+        self.forecast2_cloud_5.setStyleSheet(u"color: #000000;border: none;")
+
+        self.gridLayout_11.addWidget(self.forecast2_cloud_5, 5, 0, 1, 2)
+
         self.forecast2_high_5 = QLabel(self.frame_37)
         self.forecast2_high_5.setObjectName(u"forecast2_high_5")
         self.forecast2_high_5.setStyleSheet(u"border:none;")
 
         self.gridLayout_11.addWidget(self.forecast2_high_5, 1, 1, 1, 1)
+
+        self.day_number_5 = QLabel(self.frame_37)
+        self.day_number_5.setObjectName(u"day_number_5")
+        self.day_number_5.setStyleSheet(u"border:none;")
+        self.day_number_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
+
+        self.gridLayout_11.addWidget(self.day_number_5, 0, 0, 1, 2)
 
         self.forecast2_low_5 = QLabel(self.frame_37)
         self.forecast2_low_5.setObjectName(u"forecast2_low_5")
@@ -1909,7 +1939,7 @@ class Ui_MainWindow(object):
         self.forecast2_wind_5.setFont(font8)
         self.forecast2_wind_5.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_11.addWidget(self.forecast2_wind_5, 3, 0, 1, 1)
+        self.gridLayout_11.addWidget(self.forecast2_wind_5, 3, 0, 1, 2)
 
         self.forecast2_humid_5 = QLabel(self.frame_37)
         self.forecast2_humid_5.setObjectName(u"forecast2_humid_5")
@@ -1917,22 +1947,7 @@ class Ui_MainWindow(object):
         self.forecast2_humid_5.setFont(font8)
         self.forecast2_humid_5.setStyleSheet(u"color: #000000;border: none;")
 
-        self.gridLayout_11.addWidget(self.forecast2_humid_5, 3, 1, 1, 1)
-
-        self.forecast2_cloud_5 = QLabel(self.frame_37)
-        self.forecast2_cloud_5.setObjectName(u"forecast2_cloud_5")
-        self.forecast2_cloud_5.setMinimumSize(QSize(0, 30))
-        self.forecast2_cloud_5.setFont(font8)
-        self.forecast2_cloud_5.setStyleSheet(u"color: #000000;border: none;")
-
-        self.gridLayout_11.addWidget(self.forecast2_cloud_5, 4, 0, 1, 1)
-
-        self.day_number_5 = QLabel(self.frame_37)
-        self.day_number_5.setObjectName(u"day_number_5")
-        self.day_number_5.setStyleSheet(u"border:none;")
-        self.day_number_5.setAlignment(Qt.AlignmentFlag.AlignCenter)
-
-        self.gridLayout_11.addWidget(self.day_number_5, 0, 0, 1, 2)
+        self.gridLayout_11.addWidget(self.forecast2_humid_5, 4, 0, 1, 2)
 
 
         self.horizontalLayout_4.addWidget(self.frame_37)
@@ -1958,7 +1973,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -1974,7 +1989,7 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"Loading weather location:", None))
         self.current_weather_icon.setText("")
         self.current_weather_label.setText(QCoreApplication.translate("MainWindow", u"Please wait.. ", None))
-        self.current_temp_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Please wait...</p></body></html>", None))
+        self.current_temp_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>Please </p><p>wait...</p></body></html>", None))
         self.label_12.setText("")
         self.current_wind_label.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">please wait..</span></p></body></html>", None))
         self.label_13.setText("")
@@ -1992,7 +2007,7 @@ class Ui_MainWindow(object):
         self.label_6.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">Monday</p></body></html>", None))
         self.label_14.setText("")
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:18pt;\">Time and date</span></p></body></html>", None))
-        self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:36pt;\">00:00</span></p></body></html>", None))
+        self.label_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" font-size:48pt;\">00:00</span></p></body></html>", None))
         self.lineEdit.setText("")
         self.lineEdit.setPlaceholderText(QCoreApplication.translate("MainWindow", u"Search location...", None))
         self.toolButton.setText(QCoreApplication.translate("MainWindow", u"Current location", None))
@@ -2060,40 +2075,40 @@ class Ui_MainWindow(object):
         self.forecast1_describe_15.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" font-weight:700;\">description</span></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.three_hour_forecast), QCoreApplication.translate("MainWindow", u"Every 3 hours", None))
         self.forecast2_cloud_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>cloud</p></body></html>", None))
-        self.forecast2_wind_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>wind</p></body></html>", None))
         self.forecast2_high_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>high</p></body></html>", None))
-        self.forecast2_humid_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>humid</p></body></html>", None))
+        self.day_number_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">+1 day</p></body></html>", None))
         self.forecast2_low_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>low</p></body></html>", None))
         self.forecast2_icon_1.setText("")
-        self.day_number_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">+1 day</p></body></html>", None))
-        self.forecast2_icon_2.setText("")
-        self.forecast2_high_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>high</p></body></html>", None))
+        self.forecast2_wind_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>wind</p></body></html>", None))
+        self.forecast2_humid_1.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>humid</p></body></html>", None))
+        self.forecast2_cloud_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>cloud</p></body></html>", None))
         self.forecast2_low_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>low</p></body></html>", None))
+        self.forecast2_high_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>high</p></body></html>", None))
+        self.forecast2_icon_2.setText("")
+        self.day_number_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">+1 day</p></body></html>", None))
         self.forecast2_wind_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>wind</p></body></html>", None))
         self.forecast2_humid_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>humid</p></body></html>", None))
-        self.forecast2_cloud_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p>cloud</p></body></html>", None))
-        self.day_number_2.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\">+1 day</p></body></html>", None))
+        self.day_number_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#000000;\">+1 day</span></p></body></html>", None))
         self.forecast2_icon_3.setText("")
         self.forecast2_high_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">high </span></p></body></html>", None))
         self.forecast2_low_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">low </span></p></body></html>", None))
-        self.forecast2_wind_3.setText(QCoreApplication.translate("MainWindow", u"wind ", None))
-        self.forecast2_humid_3.setText(QCoreApplication.translate("MainWindow", u"humid", None))
         self.forecast2_cloud_3.setText(QCoreApplication.translate("MainWindow", u"cloud ", None))
-        self.day_number_3.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#000000;\">+1 day</span></p></body></html>", None))
-        self.forecast2_icon_4.setText("")
-        self.forecast2_high_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">high </span></p></body></html>", None))
-        self.forecast2_low_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">low </span></p></body></html>", None))
-        self.forecast2_wind_4.setText(QCoreApplication.translate("MainWindow", u"wind ", None))
-        self.forecast2_humid_4.setText(QCoreApplication.translate("MainWindow", u"humid", None))
+        self.forecast2_humid_3.setText(QCoreApplication.translate("MainWindow", u"humid", None))
+        self.forecast2_wind_3.setText(QCoreApplication.translate("MainWindow", u"wind ", None))
         self.forecast2_cloud_4.setText(QCoreApplication.translate("MainWindow", u"cloud ", None))
+        self.forecast2_low_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">low </span></p></body></html>", None))
+        self.forecast2_icon_4.setText("")
         self.day_number_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#000000;\">+1 day</span></p></body></html>", None))
+        self.forecast2_high_4.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">high </span></p></body></html>", None))
+        self.forecast2_humid_4.setText(QCoreApplication.translate("MainWindow", u"humid", None))
+        self.forecast2_wind_4.setText(QCoreApplication.translate("MainWindow", u"wind ", None))
         self.forecast2_icon_5.setText("")
+        self.forecast2_cloud_5.setText(QCoreApplication.translate("MainWindow", u"cloud ", None))
         self.forecast2_high_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">high </span></p></body></html>", None))
+        self.day_number_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#000000;\">+1 day</span></p></body></html>", None))
         self.forecast2_low_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p><span style=\" color:#000000;\">low </span></p></body></html>", None))
         self.forecast2_wind_5.setText(QCoreApplication.translate("MainWindow", u"wind ", None))
         self.forecast2_humid_5.setText(QCoreApplication.translate("MainWindow", u"humid", None))
-        self.forecast2_cloud_5.setText(QCoreApplication.translate("MainWindow", u"cloud ", None))
-        self.day_number_5.setText(QCoreApplication.translate("MainWindow", u"<html><head/><body><p align=\"center\"><span style=\" color:#000000;\">+1 day</span></p></body></html>", None))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Daily_forecast), QCoreApplication.translate("MainWindow", u"Daily", None))
     # retranslateUi
 
