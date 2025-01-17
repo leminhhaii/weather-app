@@ -1,9 +1,9 @@
 # This Python file uses the following encoding: utf-8
 import sys
 
-from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter, QMessageBox
+from PySide6.QtWidgets import QApplication, QMainWindow, QCompleter, QMessageBox, QSizePolicy  
 from PySide6.QtCore import QTimer, QTime, QDate, Qt, QStringListModel
-from PySide6.QtGui import QPixmap
+from PySide6.QtGui import QPixmap, QPainter, QBrush
 import requests
 from datetime import datetime
 import os
@@ -18,6 +18,7 @@ import requests
 from geopy.distance import geodesic
 import pycountry
 from collections import Counter
+import PySide6.QtCharts as QtCharts
 
 # Important:
 # You need to run the following command to generate the ui_form.py file
@@ -25,7 +26,7 @@ from collections import Counter
 #     pyside2-uic form.ui -o ui_form.py
 from ui_form import Ui_MainWindow
 # from PyQt5 import uic
-API_key = "b0fe4918f63d2cee8180e79d30a72792"
+API_key = ""
 
 class MainWindow(QMainWindow):
 	def __init__(self, parent=None):
@@ -35,8 +36,12 @@ class MainWindow(QMainWindow):
 		self.cached_location = None
 		self.lat = None
 		self.lon = None
+		self.hours = []
+		self.temperatures = []
+		self.chart = QtCharts.QChart()
 
 		self.ui.progressBar.setVisible(False)
+		self.ui.graph_widget.hide()
 		self.ui.frame_11.hide()
 
 		# Prompt app info
@@ -47,7 +52,8 @@ class MainWindow(QMainWindow):
 		self.ui.toolButton.clicked.connect(self.current_position)
 		# search location
 		self.ui.pushButton.clicked.connect(self.get_input)
-
+		self.ui.lineEdit.returnPressed.connect(self.get_input)
+		
 		# Setup time and date
 		self.timer = QTimer(self)
 		self.timer.timeout.connect(self.update_date_and_time)  
@@ -56,7 +62,81 @@ class MainWindow(QMainWindow):
 		
 		city_list = self.load_city_list("formatted_cities.txt")
 		self.fill_search(city_list)
+
+	def convert_to_12_hour_format(self, hour):
+		hour = int(hour)
+		if hour == 0:
+			return "12 AM"
+		elif hour < 12:
+			return f"{hour} AM"
+		elif hour == 12:
+			return "12 PM"
+		else:
+			return f"{hour - 12} PM"
+
+	def draw_graph(self):
+		self.ui.graph_widget.show()
+		if hasattr(self, 'chartView') and self.chartView is not None:
+			self.chartView.deleteLater()  # Remove the old chart view from memory
+
+		# Clear the previous chart series (in case the chart object is reused)
+		self.chart.removeAllSeries()
+		for axis in self.chart.axes():
+			self.chart.removeAxis(axis)
+		
+		self.series = QtCharts.QLineSeries()
+		data = list(zip(self.hours[0:9], self.temperatures[0:9]))
+
+		sorted_data = sorted(data, key=lambda x: float(x[0]))  # Sorting by the hour value
+
+		# Append sorted data to the series
+		for hour, temp in sorted_data:
+			self.series.append(hour, temp)
 	
+		# Create the chart and set the title
+		
+		self.chart.legend().hide()  # Hide the legend
+		self.chart.addSeries(self.series)  # Add the data series
+		self.chart.setTitle("Weather forecast for every 3 hours")  # Set chart title
+
+		x_axis = QtCharts.QCategoryAxis()
+		x_axis.setTitleText("Hour")
+
+		for hour, _ in sorted_data:
+			formatted_hour = self.convert_to_12_hour_format(hour)
+			x_axis.append(formatted_hour, float(hour)) 
+
+		# Set the custom x-axis to the chart
+		self.chart.addAxis(x_axis, Qt.AlignBottom)  # Add the x-axis to the bottom of the chart
+		self.series.attachAxis(x_axis)
+
+		# Configure Y-axis (temperatures)
+		y_axis = QtCharts.QValueAxis()
+		y_axis.setRange(min(self.temperatures) - 5, max(self.temperatures) + 5)  # Add padding to the temperature range
+		y_axis.setTitleText("Temperature (°C)")
+		self.chart.addAxis(y_axis, Qt.AlignLeft)    # Add the y-axis to the left of the chart
+		self.series.attachAxis(y_axis)
+
+		# Create the chart view
+		self.chartView = QtCharts.QChartView(self.chart)
+		self.chartView.setRenderHint(QPainter.Antialiasing)  
+		self.chart.setAnimationOptions(QtCharts.QChart.AllAnimations)
+
+		# Set a size policy for the chart view
+		sizePolicy = QSizePolicy(QSizePolicy.Expanding, QSizePolicy.Expanding)
+		sizePolicy.setHorizontalStretch(0)
+		sizePolicy.setVerticalStretch(0)
+		sizePolicy.setHeightForWidth(self.chartView.sizePolicy().hasHeightForWidth())
+		self.chartView.setSizePolicy(sizePolicy)
+		self.chartView.setMinimumSize(0, 300)  
+
+
+		self.chart.setBackgroundBrush(QBrush(Qt.transparent))
+		self.chartView.setStyleSheet("background: transparent;")
+		self.chart.setPlotAreaBackgroundBrush(QBrush(Qt.transparent))
+
+		self.ui.graph_widget.layout().addWidget(self.chartView)
+
 	def refresh_data(self):
 		city, country = self.cached_location
 		lat = self.lat
@@ -361,6 +441,8 @@ class MainWindow(QMainWindow):
 		url = f"https://api.openweathermap.org/data/2.5/forecast?lat={latitude}&lon={longitude}&appid={API_key}&units=metric"
 		response = requests.get(url)
 		data = response.json()
+		self.temperatures.clear()
+		self.hours.clear()
 
 		for n, forecast in enumerate(data['list'][:15]):
 			date_time = forecast['dt_txt']
@@ -375,10 +457,14 @@ class MainWindow(QMainWindow):
 			clouds = forecast['clouds']['all']
 			wind_speed = forecast['wind']['speed']
 
+			self.temperatures.append(float(temp))
+			self.hours.append(float(date.strftime("%H")))
+
 			getattr(self.ui, f'hour_number_{n+1}').setText(day_of_week + " " + time_of_day)
 			self.set_weather_icon(getattr(self.ui, f'forecast1_icon_{n+1}'), icon)
-			getattr(self.ui, f'forecast1_temp_{n+1}').setText(f"Temp: {temp}°C")
+			getattr(self.ui, f'forecast1_temp_{n+1}').setText(f"{temp}°C")
 			getattr(self.ui, f'forecast1_describe_{n+1}').setText(description)
+		self.draw_graph()
 
 	def update_date_and_time(self):
 		current_time = QTime.currentTime()
